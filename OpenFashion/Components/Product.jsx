@@ -19,7 +19,7 @@ export default function Product  ({ product }) {
     <View style={styles.productContainer}>
       <View>
         <Image source={product.image} style={styles.image} />
-        <TouchableOpacity onPress={() => addToCart}>
+        <TouchableOpacity onPress={() => addToCart()}>
           <Image style={styles.ado} source={require('../assets/add_circle.png')}  />
         </TouchableOpacity>
       </View>

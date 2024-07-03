@@ -33,7 +33,7 @@ export default function CartScreen({navigation}){
     };
 
     return(
-            <ScrollView>
+            <ScrollView style={styles.kolop}>
             <View style={styles.kolop}>
             
                 <View style={styles.headerfx}>
@@ -63,7 +63,7 @@ export default function CartScreen({navigation}){
                   </Text>
                   </View>
                 
-                  <TouchableOpacity style={styles.ado} onPress={() => removeFromCart}>
+                  <TouchableOpacity style={styles.ado} onPress={() => removeFromCart(index)}>
                     <Image style={styles.popp}  source={require('../assets/remove.png')}  />
                   </TouchableOpacity>
                 </View>
@@ -73,9 +73,11 @@ export default function CartScreen({navigation}){
                   
                 ))}
                 </View>
-                 
+                <View style={styles.botx}>
+                  <Image style={styles.botx1} source={require('../assets/tt.png')} />
+                </View>
             </View>
-                
+            
             </ScrollView>
     )
 }
@@ -85,6 +87,7 @@ const styles = StyleSheet.create({
     marginLeft: 6,
     marginBottom: 25,
     flexDirection: 'row',
+
   },
   tst:{
       alignSelf: 'center',
@@ -105,6 +108,18 @@ const styles = StyleSheet.create({
     height: 180,
     flex: 1,
   },
+  botx:{
+    justifyContent: 'center',
+    flex: 1,
+  },
+  botx1:{
+    position: 'relative',
+    width: 370,
+    height: 90,
+    alignSelf: 'center',
+    marginTop: 220,
+    
+  },
   headerfx:{
       flexDirection: 'row',
       justifyContent: 'space-between',
@@ -118,6 +133,7 @@ const styles = StyleSheet.create({
       marginTop: 27,
       backgroundColor: '#ffffff',
       marginLeft: 3,
+      flex: 1,
   },
   ado:{
     alignSelf: 'flex-end',
